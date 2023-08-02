@@ -3,7 +3,7 @@ namespace Generics
 {
 	public class Utility
 	{
-		public static int LargestInt(int x, int y, int z)
+		public static float LargestFloat(float x, float y, float z)
 		{
             
                 if (x >= y)
