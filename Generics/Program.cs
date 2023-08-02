@@ -3,17 +3,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        float x, y, z;
+        Console.WriteLine("Enter three strings:");
+        string[] strings = new string[3];
+        for (int i = 0; i < 3; i++)
+        {
+            Console.Write($"String {i + 1}: ");
+            strings[i] = Console.ReadLine();
+        }
 
-        Console.WriteLine("Welcome to Generics!");
-        Console.WriteLine("Enter x");
-        x = Convert.ToSingle(Console.ReadLine());
-        Console.WriteLine("Enter y");
-        y = Convert.ToSingle(Console.ReadLine());
-        Console.WriteLine("Enter z");
-        z = Convert.ToSingle(Console.ReadLine());
-        Console.WriteLine($"Maximum integer is {Utility.LargestFloat(x, y, z)}");
+        string maxString = Utility.GetMaximumString(strings);
+
+        Console.WriteLine($"The maximum string is: {maxString}");
         Console.ReadLine();
     }
+
+
 }
 

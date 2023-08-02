@@ -3,36 +3,17 @@ namespace Generics
 {
 	public class Utility
 	{
-		public static float LargestFloat(float x, float y, float z)
-		{
-            
-                if (x >= y)
+        public static string GetMaximumString(string[] strings)
+        {
+            string maxString = strings[0];
+            for (int i = 1; i < strings.Length; i++)
+            {
+                if (string.Compare(strings[i], maxString) > 0)
                 {
-                    if (x >= z)
-                    {
-                        return x;
-                    }
-                    else
-                    {
-
-                        return z;
-
-                    }
-
+                    maxString = strings[i];
                 }
-
-                else
-                {
-                    if (y >= z)
-                    {
-                        return y;
-                    }
-                    else
-                    {
-                        return z;
-                    }
-                }
+            }
+            return maxString;
         }
-	}
+    }
 }
-
