@@ -3,16 +3,12 @@ class Program
 {
     static void Main(string[] args)
     {
+        string x, y, z;
         Console.WriteLine("Enter three strings:");
-        string[] strings = new string[3];
-        for (int i = 0; i < 3; i++)
-        {
-            Console.Write($"String {i + 1}: ");
-            strings[i] = Console.ReadLine();
-        }
-
-        string maxString = Utility.GetMaximumString(strings);
-
+        x = Console.ReadLine();
+        y = Console.ReadLine();
+        z = Console.ReadLine();
+        string maxString = Utility.GetMaximum("a", "a", "a" );
         Console.WriteLine($"The maximum string is: {maxString}");
         Console.ReadLine();
     }

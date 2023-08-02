@@ -3,17 +3,18 @@ namespace Generics
 {
 	public class Utility
 	{
-        public static string GetMaximumString(string[] strings)
+        public static T GetMaximum<T>(T a, T b, T c) where T : IComparable<T>
         {
-            string maxString = strings[0];
-            for (int i = 1; i < strings.Length; i++)
+            T max = a;
+            if (b.CompareTo(max) > 0)
             {
-                if (string.Compare(strings[i], maxString) > 0)
-                {
-                    maxString = strings[i];
-                }
+                max = b;
             }
-            return maxString;
+            if (c.CompareTo(max) > 0)
+            {
+                max = c;
+            }
+            return max;
         }
     }
 }
