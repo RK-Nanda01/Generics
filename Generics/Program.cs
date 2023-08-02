@@ -13,7 +13,7 @@ class Program
         }
 
         GenericUtility<int> obj = new GenericUtility<int>();
-        Console.WriteLine($"The maximum value is: {GenericUtility<int>.GreatestInArray(arr)}");
+        GenericUtility<int>.GreatestInArray(arr);
         Console.ReadLine();
     
     }
